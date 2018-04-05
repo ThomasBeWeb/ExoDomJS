@@ -7,6 +7,8 @@ function clearContent(){
         nodeList.removeChild(nodeList.firstChild);
     }
     
+    document.getElementById("content").className = "col";
+    
 }
 
 //Fonction creation d'un Div
@@ -48,4 +50,62 @@ function test4(){
     
     document.getElementById("content").innerHTML = "<div>babab</div>";
     
+}
+
+function test6(){
+    
+    var newDiv = document.createElement("div");
+    
+    newDiv.id = "bla"
+    
+    newDiv.innerHTML = "bla";
+    
+    newDiv.style.backgroundColor = "yellow";
+    
+    document.getElementById("content").appendChild(newDiv);
+    
+    newDiv = document.createElement("div");
+    
+    newDiv.id = "car"
+    
+    newDiv.innerHTML = "car";
+    
+    newDiv.style.backgroundColor = "blue";
+    
+    document.getElementById("content").appendChild(newDiv);
+    
+}
+
+function test7(){
+    
+    var bla = document.getElementById("bla");
+    var car = document.getElementById("car");
+    
+    car.appendChild(bla);
+    
+}
+
+function addMap(){
+    
+    var newDiv = document.createElement("div");
+    
+    newDiv.id = "map"
+    
+    document.getElementById("content").appendChild(newDiv);
+    
+    initMap();
+
+}
+
+function initMap() {
+    
+var uluru = {lat: 43.676209, lng: 4.133503};
+var map = new google.maps.Map(document.getElementById('map'), {
+  zoom: 17,
+  center: uluru
+});
+var marker = new google.maps.Marker({
+  position: uluru,
+  map: map
+});
 }

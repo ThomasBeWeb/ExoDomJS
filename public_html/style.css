@@ -21,3 +21,9 @@ body{
     margin: 10px;
     background-color: DarkCyan;
 }
+
+#map {
+    width: 100%;
+    height: 400px;
+    background-color: grey;
+}
